@@ -46,8 +46,7 @@ runs:
   steps:
     - shell: bash
       run: |
-        chmod a+x "${GITHUB_ACTION_PATH}/action.sh"
-        "${GITHUB_ACTION_PATH}/action.sh"
+        bash "${GITHUB_ACTION_PATH}/action.sh"
       env:
         INPUT_TEXLIVE_VERSION: ${{ inputs.texlive_version }}
         INPUT_DOCKER_IMAGE: ${{ inputs.docker_image }}
